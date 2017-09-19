@@ -8,13 +8,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({name: 'OtherDuties'})
 @Component({
   selector: 'page-other-duties',
   templateUrl: 'other-duties.html',
 })
 export class OtherDutiesPage {
 
+  InitialDate: string = new Date().toISOString();
+  StartTime: string = new Date().toLocaleTimeString();
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

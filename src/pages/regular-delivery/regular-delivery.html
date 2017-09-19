@@ -6,13 +6,72 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Material Dispatch Survey</ion-title>
+  <ion-navbar color="primary" >
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Regulary Delivery <img class='title-image' src='../assets/icon/iconSmall.png' /></ion-title>
   </ion-navbar>
-
 </ion-header>
-
-
 <ion-content padding>
-  <h3>Regulary Delivery</h3>
+  <h3>Material Dispatch Survey</h3>
+  <ion-list >
+      <ion-item>
+          <ion-label>Date</ion-label>
+          <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="InitialDate" ></ion-datetime>
+      </ion-item>
+      <ion-item>
+          <ion-label>Driver's Number</ion-label>
+          <ion-input type="number" autocomplete="on" clearInput text-right></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label>Driver's Name</ion-label>
+          <ion-input type="text" autocomplete="on" clearInput text-right></ion-input>
+      </ion-item>
+          <ion-item>
+            <ion-label>Origination</ion-label>
+            <ion-select [(ngModel)]="origination">
+              <ion-option value="nes">Location 1</ion-option>
+              <ion-option value="n64">Location 2</ion-option>
+              <ion-option value="ps">Location 3</ion-option>
+              <ion-option value="genesis">Location 4</ion-option>
+              <ion-option value="saturn">Location 5</ion-option>
+              <ion-option value="snes">Location 6</ion-option>
+            </ion-select>
+          </ion-item>
+            <ion-item>
+              <ion-label>Destination</ion-label>
+              <ion-select [(ngModel)]="destination">
+                <ion-option value="nes">Location 1</ion-option>
+                <ion-option value="n64">Location 2</ion-option>
+                <ion-option value="ps">Location 3</ion-option>
+                <ion-option value="genesis">Location 4</ion-option>
+                <ion-option value="saturn">Location 5</ion-option>
+                <ion-option value="snes">Location 6</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+          <ion-item class="item-input" style="border-bottom:none !important">
+              <ion-label class="label label-md">Weight</ion-label>
+              
+              <ion-chip item-end (click)="OpenAddWeightModal()">
+                  <ion-icon name="add" color="secondary" ></ion-icon>
+                  <ion-label >ADD</ion-label>
+                </ion-chip>
+            </ion-item>
+          <ion-list no-lines inset >
+            <ion-item-sliding *ngFor="let item of items">
+              <ion-item >{{ item }}</ion-item>
+              <ion-item-options side="right">
+                  <button ion-button color="danger" (click)="DeleteWeight(item)">
+                    <ion-icon name="delete"></ion-icon>
+                    Delete
+                  </button>
+                </ion-item-options>
+              
+            </ion-item-sliding>
+          </ion-list>
+        <ion-buttons end>
+          <button ion-button secondary menuToggle>Submit</button>
+        </ion-buttons>
 </ion-content>

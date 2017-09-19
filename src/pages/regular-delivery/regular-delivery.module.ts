@@ -4,7 +4,7 @@ import { RegularDeliveryPage } from './regular-delivery';
 
 @NgModule({
   declarations: [
-    RegularDeliveryPage,
+    RegularDeliveryPage
   ],
   imports: [
     IonicPageModule.forChild(RegularDeliveryPage),

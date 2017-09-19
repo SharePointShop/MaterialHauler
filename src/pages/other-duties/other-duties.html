@@ -6,13 +6,51 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>OtherDuties</ion-title>
+  <ion-navbar  color="primary">
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Other Duties Survey <img class='title-image' src='../assets/icon/iconSmall.png' /></ion-title>
   </ion-navbar>
-
 </ion-header>
-
-
 <ion-content padding>
+    <h3>Material Dispatch Survey</h3>
+    <ion-list >
+        
+        <ion-item>
+            <ion-label>Driver's Number</ion-label>
+            <ion-input type="number" autocomplete="on" clearInput text-right></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Driver's Name</ion-label>
+            <ion-input type="text" autocomplete="on" clearInput text-right></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Other Duty Performed</ion-label>
+            <ion-select [(ngModel)]="origination">
+              <ion-option value="Duty 1">Duty 1</ion-option>
+              <ion-option value="Duty 2">Duty 2</ion-option>
+              <ion-option value="Duty 3">Duty 3</ion-option>
+              <ion-option value="Duty 4">Duty 4</ion-option>
+              <ion-option value="Duty 5">Duty 5</ion-option>
+              <ion-option value="Duty 6">Duty 6</ion-option>
+            </ion-select>
+          </ion-item>
+        <ion-item>
+            <ion-label>Date</ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="InitialDate" ></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Start Time</ion-label>
+            <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="StartTime"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>End Time</ion-label>
+            <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" ></ion-datetime>
+        </ion-item>
 
+      </ion-list>
+      <ion-buttons end>
+        <button ion-button secondary menuToggle>Submit</button>
+      </ion-buttons>
 </ion-content>
