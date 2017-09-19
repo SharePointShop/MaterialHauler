@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">Cancel</button>
+    </ion-buttons>
+    <ion-title>Add Weight</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+        
+        <ion-item>
+            <ion-label>Material</ion-label>
+            <ion-select [(ngModel)]="Material">
+                <ion-option value="Material 1">Material 1</ion-option>
+                <ion-option value="Material 2">Material 2</ion-option>
+                <ion-option value="Material 3">Material 3</ion-option>
+                <ion-option value="Material 4">Material 4</ion-option>
+                <ion-option value="Material 5">Material 5</ion-option>
+                <ion-option value="Material 6">Material 6</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item  class="item-input" >
+            <ion-label>Tons</ion-label>
+            <ion-input type="number" clearInput text-right [(ngModel)]="Weight"></ion-input>
+        </ion-item>
+  </ion-list>
+  <button ion-button color="primary" full (click)="addItem()">Add</button>
+  <button ion-button color="danger" full (click)="dismiss()">Cancel</button>
+
+</ion-content>
