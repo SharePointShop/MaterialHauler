@@ -10,7 +10,7 @@
       <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
-    <ion-title>Other Duties Survey <img class='title-image' src='../assets/icon/iconSmall.png' /></ion-title>
+    <ion-title>Other Duties <img class='title-image' src='../assets/icon/iconSmall.png' /></ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
@@ -27,14 +27,7 @@
         </ion-item>
         <ion-item>
             <ion-label>Other Duty Performed</ion-label>
-            <ion-select [(ngModel)]="origination">
-              <ion-option value="Duty 1">Duty 1</ion-option>
-              <ion-option value="Duty 2">Duty 2</ion-option>
-              <ion-option value="Duty 3">Duty 3</ion-option>
-              <ion-option value="Duty 4">Duty 4</ion-option>
-              <ion-option value="Duty 5">Duty 5</ion-option>
-              <ion-option value="Duty 6">Duty 6</ion-option>
-            </ion-select>
+            <ion-input type="text" autocomplete="on" clearInput text-right></ion-input>
           </ion-item>
         <ion-item>
             <ion-label>Date</ion-label>

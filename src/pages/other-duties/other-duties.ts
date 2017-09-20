@@ -8,7 +8,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage({name: 'OtherDuties'})
+@IonicPage({name: 'OtherDuties', priority: 'high'})
 @Component({
   selector: 'page-other-duties',
   templateUrl: 'other-duties.html',

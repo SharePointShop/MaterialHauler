@@ -6,7 +6,7 @@ import { AddWeightModal } from '../../modals/add-weight/add-weight';
  * Generated class for the CustomerDeliveryPage page.
 
  */
-@IonicPage({name: 'CustomerDelivery'})
+@IonicPage({name: 'CustomerDelivery', priority: 'high'})
 @Component({
   selector: 'page-customer-delivery',
   templateUrl: 'customer-delivery.html',
